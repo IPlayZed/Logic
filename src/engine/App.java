@@ -6,6 +6,8 @@ import static org.lwjgl.glfw.GLFW.glfwCreateWindow;
 import static org.lwjgl.glfw.GLFW.glfwInit;
 import static org.lwjgl.glfw.GLFW.glfwShowWindow;
 import static org.lwjgl.glfw.GLFW.glfwMakeContextCurrent;
+import static org.lwjgl.opengl.GL.createCapabilities;
+import static org.lwjgl.opengl.GL11.glClearColor;
 
 /***
  * This class is used for getting information about the app/window.
@@ -33,7 +35,9 @@ public class App {
         glfwShowWindow(window);
         glfwMakeContextCurrent(window);
 
-        GL.createCapabilities();
+        createCapabilities();
+        glClearColor(0,0,0,1);
+
         return window;
     }
 }
