@@ -1,11 +1,6 @@
-package engine;
+package hu.iplayzed.engine;
 
-import org.lwjgl.opengl.GL;
-
-import static org.lwjgl.glfw.GLFW.glfwCreateWindow;
-import static org.lwjgl.glfw.GLFW.glfwInit;
-import static org.lwjgl.glfw.GLFW.glfwShowWindow;
-import static org.lwjgl.glfw.GLFW.glfwMakeContextCurrent;
+import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL.createCapabilities;
 import static org.lwjgl.opengl.GL11.glClearColor;
 
@@ -13,13 +8,21 @@ import static org.lwjgl.opengl.GL11.glClearColor;
  * This class is used for getting information about the app/window.
  */
 public class App {
-    /** Window name, do not change this! */
-    private static final String winName ="LocalEngine";
-    /** Window width */
-    private static int winWidth =960;
-    /** Window height. */
-    private static int winHeight =540;
-    /** Window handler. */
+    /**
+     * Window name, do not change this!
+     */
+    private static final String WIN_NAME = "LocalEngine";
+    /**
+     * Window width
+     */
+    private static int winWidth = 960;
+    /**
+     * Window height.
+     */
+    private static int winHeight = 540;
+    /**
+     * Window handler.
+     */
     private static long window;
 
     /***
@@ -31,7 +34,7 @@ public class App {
             System.err.println("GLFW failed to initialize!");
             System.exit(-1);
         }
-        window=glfwCreateWindow(winWidth, winHeight,winName,0,0);
+        window = glfwCreateWindow(winWidth, winHeight, WIN_NAME,0,0);
         glfwShowWindow(window);
         glfwMakeContextCurrent(window);
 

@@ -1,4 +1,4 @@
-package engine;
+package hu.iplayzed.engine;
 
 
 import org.lwjgl.opengl.GL11;
@@ -7,7 +7,8 @@ import static org.lwjgl.glfw.GLFW.*;
 
 /***
  * This is a Unity-like engine with similar layout and interface.
- *
+ * @author IPlayZed
+ * @version 01.30.01.2021
  */
 public class Core {
     public static void main(String[] args) {

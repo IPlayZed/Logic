@@ -1,4 +1,4 @@
-package engine;
+package hu.iplayzed.engine;
 
 public class Color {
     public static final float CHANNEL_HIGH = 1f;
